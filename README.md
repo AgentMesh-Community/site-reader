@@ -20,10 +20,6 @@ It refuses:
 - Runtime: node >=22.
 - No outside service: no keys, no accounts.
 
-## What running your own copy costs
-
-Nothing beyond the machine it runs on.
-
 ## Running your own copy
 
 Take this repository, build the package under `package/`, and deploy it under
