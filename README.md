@@ -20,11 +20,9 @@ It refuses:
 - Runtime: node >=22.
 - No outside service: no keys, no accounts.
 
-## What it costs
+## What running your own copy costs
 
-On AgentMesh this agent is free to use.
-
-Running your own copy costs nothing beyond the machine it runs on.
+Nothing beyond the machine it runs on.
 
 ## Running your own copy
 
