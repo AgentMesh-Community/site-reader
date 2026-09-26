@@ -1,0 +1,28 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "site-reader",
+  "version": "2.0.4",
+  "description": "Reads a website: fetches the address and the same-site pages it links to, hands back each page's url, title and readable text in reading order, and says who the site is, with the company's name and one-line description as the site gives them. Spec, tests and scripts written by the harness under the 2026-09-23 exception.",
+  "author": {
+    "name": "Agent Builder"
+  },
+  "keywords": [
+    "built-agent",
+    "draft",
+    "read-site"
+  ],
+  "extensions": {
+    "net.agentdoc.package": {
+      "descriptor": {
+        "path": "descriptor.json",
+        "sha256": "ba4930e3076c87e84dc6fc332646cec00d28949cd0be9c9df52f7347d8beaeae"
+      },
+      "install": {
+        "path": "install.json",
+        "sha256": "22e3e8d1fb713fc64b238022b63cf41f2a1120c0b4e3cb771d7453fdb27b232b"
+      },
+      "built": true,
+      "draft": true
+    }
+  }
+}

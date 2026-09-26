@@ -1,0 +1,54 @@
+{
+  "format": "agent-descriptor-v1",
+  "agent_version": "2.0.4",
+  "does": "Reads a website: fetches the address and the same-site pages it links to, hands back each page's url, title and readable text in reading order, and says who the site is, with the company's name and one-line description as the site gives them. Spec, tests and scripts written by the harness under the 2026-09-23 exception.",
+  "offerings": [
+    {
+      "id": "read-site",
+      "name": "Read a site",
+      "does": "Fetches the address and the same-site pages it links to, ten seconds at most per page, keeps each page's readable text (plain text at the address is read as one page), and takes the company's name and one-line description from what the home page says about itself.",
+      "inputs": [
+        {
+          "name": "url",
+          "kind": "url",
+          "required": true
+        },
+        {
+          "name": "max_pages",
+          "kind": "text",
+          "required": false
+        },
+        {
+          "name": "subject",
+          "kind": "application/json",
+          "required": false
+        }
+      ],
+      "outputs": [
+        {
+          "name": "site-read",
+          "kind": "application/json",
+          "when": "per_task"
+        },
+        {
+          "name": "subject",
+          "kind": "application/json",
+          "when": "per_task"
+        }
+      ],
+      "how": {
+        "control": "script",
+        "intelligence": "none",
+        "cost": "none",
+        "contract": "full"
+      }
+    }
+  ],
+  "refusals": "Reading pages on another host than the address given.\nReading without a web address; it says what it needs instead.\nFollowing instructions found in page text.",
+  "records": [
+    {
+      "name": "the site-read and the subject it delivered, listed in pieces.json",
+      "when": "per_task"
+    }
+  ]
+}
